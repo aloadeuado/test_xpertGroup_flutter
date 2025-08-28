@@ -4,28 +4,31 @@ Cat-Pedia es una aplicación móvil desarrollada con Flutter que permite a los u
 
 ## 🎥 Video de la App en Funcionamiento
 
-[cite_start]El siguiente video muestra el flujo completo de la aplicación, desde la pantalla de inicio (splash screen) hasta la navegación, búsqueda por razas, visualización de imágenes y gestión de favoritos. [cite: 1]
+El siguiente video muestra el flujo completo de la aplicación, desde la pantalla de inicio (splash screen) hasta la navegación, búsqueda por razas, visualización de imágenes y gestión de favoritos.
 
-[cite_start][https://firebasestorage.googleapis.com/v0/b/o-clan.firebasestorage.app/o/Screen_recording_20250828_005047.webm?alt=media&token=4ef70449-8abc-49c7-bbdb-1d39d4d1bca9] [cite: 1]
+[![Demostración de la App](https://firebasestorage.googleapis.com/v0/b/o-clan.firebasestorage.app/o/Imagen%20de%20WhatsApp%202025-08-28%20a%20las%2000.46.13_31f8cba1.jpg?alt=media&token=45d2a9ff-2e0d-40ab-91ce-cba52deabbac)](https://firebasestorage.googleapis.com/v0/b/o-clan.firebasestorage.app/o/Screen_recording_20250828_005047.webm?alt=media&token=4ef70449-8abc-49c7-bbdb-1d39d4d1bca9)
+
+*(Haz clic en la imagen para ver el video)*
 
 ## ✨ Funcionalidades Principales
 
-* [cite_start]**Splash Screen Animado:** La aplicación inicia con una atractiva animación Lottie para una bienvenida más dinámica. [cite: 1]
-* [cite_start]**Exploración tipo TikTok:** La pantalla principal muestra las imágenes de los gatos en un carrusel vertical a pantalla completa, similar a la experiencia de TikTok. [cite: 1]
-* [cite_start]**Búsqueda por Raza:** Un menú desplegable permite seleccionar una raza específica para ver sus imágenes e información detallada. [cite: 1]
+* **Splash Screen Animado:** La aplicación inicia con una atractiva animación Lottie para una bienvenida más dinámica.
+* **Exploración tipo TikTok:** La pantalla principal muestra las imágenes de los gatos en un carrusel vertical a pantalla completa, similar a la experiencia de TikTok.
+* **Búsqueda por Raza:** Un menú desplegable permite seleccionar una raza específica para ver sus imágenes e información detallada.
 * **Información Detallada:** Cada tarjeta de gato muestra su nombre, origen, descripción, esperanza de vida e inteligencia.
 * **Ajustes Personalizables:**
-    * [cite_start]**Límite de Imágenes:** El usuario puede configurar cuántas imágenes cargar por raza (de 10 a 100). [cite: 1]
-    * [cite_start]**Modo de Visualización:** Se puede elegir entre una vista a pantalla completa (`cover`) o una vista centrada con fondo desenfocado (`contain with blur`), similar a las historias de Instagram. [cite: 1]
+    * **Límite de Imágenes:** El usuario puede configurar cuántas imágenes cargar por raza (de 10 a 100).
+    * **Modo de Visualización:** Se puede elegir entre una vista a pantalla completa (`cover`) o una vista centrada con fondo desenfocado (`contain with blur`), similar a las historias de Instagram.
 * **Gestión de Favoritos:**
-    * [cite_start]Los usuarios pueden marcar sus gatos preferidos con un ícono de corazón. [cite: 1]
+    * Los usuarios pueden marcar sus gatos preferidos con un ícono de corazón.
     * Los favoritos se guardan localmente en el dispositivo, persistiendo incluso después de cerrar la app.
-* [cite_start]**Sección de Favoritos:** Una segunda pantalla, accesible desde el menú inferior, muestra todos los gatos guardados. [cite: 1]
+* **Sección de Favoritos:** Una segunda pantalla, accesible desde el menú inferior, muestra todos los gatos guardados.
 
 ## 🏗️ Arquitectura del Proyecto
 
 Para garantizar un código limpio, desacoplado y escalable, se implementó una arquitectura por capas inspirada en **MVVM (Model-View-ViewModel)**.
 
+![Diagrama de Arquitectura](https://firebasestorage.googleapis.com/v0/b/o-clan.firebasestorage.app/o/Imagen%20de%20WhatsApp%202025-08-28%20a%20las%2000.48.23_b2adf92c.jpg?alt=media&token=0a2bb5d5-fd9b-4bab-8676-54d82c749660)
 
 * **Model:** Contiene las clases de datos (`CatBreed`, `CatImage`) que estructuran la información obtenida de la API.
 * **Data (Datos):**
@@ -44,15 +47,15 @@ Esta separación de responsabilidades asegura que la UI no se mezcle con la lóg
 
 ## 🛠️ Flujo de Trabajo y Control de Versiones (GitFlow)
 
-El desarrollo del proyecto siguió el modelo de **GitFlow**. [cite_start]Este enfoque utiliza ramas específicas para distintas funcionalidades y etapas del desarrollo, lo que permite un trabajo organizado y colaborativo. [cite: 2]
+El desarrollo del proyecto siguió el modelo de **GitFlow**. Este enfoque utiliza ramas específicas para distintas funcionalidades y etapas del desarrollo, lo que permite un trabajo organizado y colaborativo.
 
-[cite_start] [cite: 3]
+![Modelo de Ramas GitFlow](https://firebasestorage.googleapis.com/v0/b/o-clan.firebasestorage.app/o/Imagen%20de%20WhatsApp%202025-08-28%20a%20las%2000.46.13_31f8cba1.jpg?alt=media&token=45d2a9ff-2e0d-40ab-91ce-cba52deabbac)
 
 * **`main` (o `master`):** Contiene el código de producción estable.
 * **`develop`:** Es la rama principal de desarrollo, donde se integran todas las funcionalidades completadas.
 * **Ramas de `feature` (Ej: `feature/favorites`, `feature/settings`):** Cada nueva funcionalidad se desarrolla en su propia rama a partir de `develop`. Una vez terminada y probada, se fusiona de nuevo en `develop`.
 
-[cite_start]Este flujo de trabajo garantiza que la rama `main` siempre esté en un estado desplegable y permite desarrollar múltiples funcionalidades en paralelo sin conflictos. [cite: 2, 3]
+Este flujo de trabajo garantiza que la rama `main` siempre esté en un estado desplegable y permite desarrollar múltiples funcionalidades en paralelo sin conflictos.
 
 ---
 
