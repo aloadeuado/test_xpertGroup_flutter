@@ -6,7 +6,7 @@ Cat-Pedia es una aplicación móvil desarrollada con Flutter que permite a los u
 
 El siguiente video muestra el flujo completo de la aplicación, desde la pantalla de inicio (splash screen) hasta la navegación, búsqueda por razas, visualización de imágenes y gestión de favoritos.
 
-[![Demostración de la App][https://firebasestorage.googleapis.com/v0/b/o-clan.firebasestorage.app/o/Screenshot_1.png?alt=media&token=9622d9a6-45da-48fa-b72c-a3469b103b83](https://firebasestorage.googleapis.com/v0/b/o-clan.firebasestorage.app/o/Screen_recording_20250828_005047.webm?alt=media&token=4ef70449-8abc-49c7-bbdb-1d39d4d1bca9)
+[![Demostración de la App](https://firebasestorage.googleapis.com/v0/b/o-clan.firebasestorage.app/o/Screenshot_1.png?alt=media&token=9622d9a6-45da-48fa-b72c-a3469b103b83)](https://firebasestorage.googleapis.com/v0/b/o-clan.firebasestorage.app/o/Screen_recording_20250828_005047.webm?alt=media&token=4ef70449-8abc-49c7-bbdb-1d39d4d1bca9)
 
 *(Haz clic en la imagen para ver el video)*
 
