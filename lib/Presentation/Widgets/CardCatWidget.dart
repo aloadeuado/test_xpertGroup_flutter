@@ -6,9 +6,10 @@ import 'package:test_tik_tok_cat/Data/Model/CatImage.dart';
 
 class CardCatWidget extends StatelessWidget{
   final CatImage catImage;
+  bool isContain;
 
 
-  CardCatWidget({required this.catImage});
+  CardCatWidget({required this.catImage, this.isContain  = false});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,7 @@ class CardCatWidget extends StatelessWidget{
       children: [
         CachedNetworkImage(
           imageUrl: catImage.url,
-          fit: BoxFit.cover,
+          fit: isContain ? BoxFit.contain : BoxFit.cover,
           placeholder: (context, url) => const Center(child: CircularProgressIndicator()),
           errorWidget: (context, url, error) => const Icon(Icons.error),
         ),

@@ -21,9 +21,9 @@ class CatApiService {
     }
   }
 
-  Future<List<CatImage>> getImagesByBreed(String breedId) async {
+  Future<List<CatImage>> getImagesByBreed(String breedId, {int limit = 10}) async {
     final response = await http.get(
-      Uri.parse('$_baseUrl/images/search?limit=10&breed_ids=$breedId'),
+      Uri.parse('$_baseUrl/images/search?limit=$limit&breed_ids=$breedId'), // <-- Usa el límite en la URL
       headers: {'x-api-key': _apiKey},
     );
 
@@ -39,4 +39,5 @@ class CatApiService {
       throw Exception('Failed to load cat images');
     }
   }
+
 }
