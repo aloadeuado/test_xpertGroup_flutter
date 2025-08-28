@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:test_tik_tok_cat/Home/HomeScreen.dart';
+import 'package:test_tik_tok_cat/Presentation/Screens/MainScreen.dart';
 class SplashScreen extends StatefulWidget{
   @override
   State<StatefulWidget> createState() => _SplashScreen();
@@ -21,7 +21,7 @@ class _SplashScreen extends State<SplashScreen>{
     await Future.delayed(const Duration(milliseconds: 4000), () {}); // 4 segundos
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => const HomeScreen()),
+      MaterialPageRoute(builder: (context) => const MainScreen()),
     );
   }
 
