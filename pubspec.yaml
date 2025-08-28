@@ -28,6 +28,15 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+
+  flutter_native_splash: ^2.4.6
+  lottie: ^3.3.1
+  http: ^1.2.1
+  provider: ^6.1.2
+  cached_network_image: ^3.3.1
+  webview_flutter: ^4.8.0
+  shared_preferences: ^2.2.3
+
   flutter:
     sdk: flutter
 
@@ -45,6 +54,7 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.14.4
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -87,3 +97,17 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+
+  assets:
+   - assets/animation_json/cat_splash_animation.json
+
+flutter_native_splash:
+  color: "#FFFFFF" # El color de fondo que tendrá tu animación
+  android: true
+  ios: true
+  web: false
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/icon_cat.png"
