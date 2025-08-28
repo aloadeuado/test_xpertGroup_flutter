@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:test_tik_tok_cat/Presentation/Providers/HomeProvider.dart';
 import 'package:test_tik_tok_cat/Presentation/Widgets/CardCatWidget.dart';
+import 'package:test_tik_tok_cat/Presentation/Widgets/SettingsPopover.dart';
 
 // Importa tu widget CatCard personalizado aquí
 
@@ -35,6 +36,14 @@ class HomeScreen extends StatelessWidget {
                 );
               }).toList(),
             ),
+            actions: [ // <-- Añade esta sección
+              IconButton(
+                icon: const Icon(Icons.settings),
+                onPressed: () {
+                  SettingsPopover.show(context);
+                },
+              ),
+            ],
           ),
           body: provider.isLoading
               ? const Center(child: CircularProgressIndicator())
@@ -44,7 +53,7 @@ class HomeScreen extends StatelessWidget {
             itemBuilder: (context, index) {
               final catImage = provider.images[index];
 
-              return CardCatWidget(catImage: catImage,);
+              return CardCatWidget(catImage: catImage, isContain: provider.isContain,);
             },
           ),
         );

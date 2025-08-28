@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'Data/Services/CatApiService.dart';
 import 'Presentation/Providers/HomeProvider.dart';
+import 'Presentation/Providers/SettingsProvider.dart';
 import 'Presentation/Screens/Splash/SplashScreen.dart';
 
 void main() {
@@ -16,9 +17,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        // El provider del Home necesita el servicio de la API
-        ChangeNotifierProvider(
-          create: (_) => HomeProvider(CatApiService()),
+        ChangeNotifierProvider(create: (_) => SettingsProvider()),
+        ChangeNotifierProxyProvider<SettingsProvider, HomeProvider>(
+          create: (context) => HomeProvider(
+            CatApiService(),
+            Provider.of<SettingsProvider>(context, listen: false),
+          ),
+          update: (context, settings, home) {
+            // Este es un buen lugar para reaccionar a cambios en los settings si es necesario
+            return home!..updateSettings(settings);
+          },
         ),
       ],
       child: MaterialApp(
