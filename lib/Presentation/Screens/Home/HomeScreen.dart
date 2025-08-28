@@ -53,7 +53,7 @@ class HomeScreen extends StatelessWidget {
             itemBuilder: (context, index) {
               final catImage = provider.images[index];
 
-              return CardCatWidget(catImage: catImage, isContain: provider.isContain,);
+              return CardCatWidget(catImage: catImage);
             },
           ),
         );

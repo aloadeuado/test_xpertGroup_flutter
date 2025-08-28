@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'Data/Services/CatApiService.dart';
+import 'Data/Services/FavoritesService.dart';
+import 'Presentation/Providers/FavoritesProvider.dart';
 import 'Presentation/Providers/HomeProvider.dart';
 import 'Presentation/Providers/SettingsProvider.dart';
 import 'Presentation/Screens/Splash/SplashScreen.dart';
@@ -28,6 +30,7 @@ class MyApp extends StatelessWidget {
             return home!..updateSettings(settings);
           },
         ),
+        ChangeNotifierProvider(create: (_) => FavoritesProvider(FavoritesService())),
       ],
       child: MaterialApp(
         title: 'Cat App',

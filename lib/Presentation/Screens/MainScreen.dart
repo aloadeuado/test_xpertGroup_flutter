@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_tik_tok_cat/Presentation/Screens/Favorites/FavoritesScreen.dart';
 import 'package:test_tik_tok_cat/Presentation/Screens/Home/HomeScreen.dart';
 
 class MainScreen extends StatefulWidget {
@@ -31,6 +32,7 @@ class _MainScreenState extends State<MainScreen> {
         },
         children: const [
           HomeScreen(),
+          FavoritesScreen(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
