@@ -28,7 +28,7 @@ El siguiente video muestra el flujo completo de la aplicación, desde la pantall
 
 Para garantizar un código limpio, desacoplado y escalable, se implementó una arquitectura por capas inspirada en **MVVM (Model-View-ViewModel)**.
 
-![Diagrama de Arquitectura](https://firebasestorage.googleapis.com/v0/b/o-clan.firebasestorage.app/o/Imagen%20de%20WhatsApp%202025-08-28%20a%20las%2000.48.23_b2adf92c.jpg?alt=media&token=0a2bb5d5-fd9b-4bab-8676-54d82c749660)
+![Diagrama de Arquitectura](https://firebasestorage.googleapis.com/v0/b/o-clan.firebasestorage.app/o/Screenshot_2.png?alt=media&token=8757fbb7-d34c-4eba-acca-0e74b1bb9914)
 
 * **Model:** Contiene las clases de datos (`CatBreed`, `CatImage`) que estructuran la información obtenida de la API.
 * **Data (Datos):**
@@ -50,6 +50,7 @@ Esta separación de responsabilidades asegura que la UI no se mezcle con la lóg
 El desarrollo del proyecto siguió el modelo de **GitFlow**. Este enfoque utiliza ramas específicas para distintas funcionalidades y etapas del desarrollo, lo que permite un trabajo organizado y colaborativo.
 
 ![Modelo de Ramas GitFlow](https://firebasestorage.googleapis.com/v0/b/o-clan.firebasestorage.app/o/Imagen%20de%20WhatsApp%202025-08-28%20a%20las%2000.46.13_31f8cba1.jpg?alt=media&token=45d2a9ff-2e0d-40ab-91ce-cba52deabbac)
+(https://firebasestorage.googleapis.com/v0/b/o-clan.firebasestorage.app/o/Imagen%20de%20WhatsApp%202025-08-28%20a%20las%2000.48.23_b2adf92c.jpg?alt=media&token=0a2bb5d5-fd9b-4bab-8676-54d82c749660)
 
 * **`main` (o `master`):** Contiene el código de producción estable.
 * **`develop`:** Es la rama principal de desarrollo, donde se integran todas las funcionalidades completadas.
